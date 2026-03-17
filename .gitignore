@@ -1,0 +1,29 @@
+# --- Unreal Engine Folders ---
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+Script/
+
+# --- C++ / Visual Studio / IDE Files ---
+.vs/
+*.sln
+*.suo
+*.user
+*.filters
+*.vcxproj
+*.vcxproj.user
+.vscode/
+
+# --- Compiled Files / Assets ---
+*.pdb
+*.obj
+*.exe
+*.dll
+*.lib
+*.exp
+
+# --- Other ---
+FileOpenOrder/
+!Config/Default*.ini
