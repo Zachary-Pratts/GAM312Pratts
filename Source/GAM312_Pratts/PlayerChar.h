@@ -9,6 +9,7 @@
 #include "Kismet/GameplayStatics.h" // Common engine utility functions
 #include "Buildingpart.h"
 #include "playerwidget.h"
+#include "objectivewidget.h"
 #include "PlayerChar.generated.h" // Unreal reflection system header
 
 UCLASS() // Macro for Unreal classes
@@ -90,6 +91,15 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UPlayerWidget* playerUI;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UObjectiveWidget* objWidget;
+
+	UPROPERTY()
+	float objectsBuilt;
+
+	UPROPERTY()
+	float matsCollected;
 
 	UFUNCTION(BlueprintCallable) // Callable from Unreal Blueprints
 		void SetHealth(float amount); // Health modifier function declaration
