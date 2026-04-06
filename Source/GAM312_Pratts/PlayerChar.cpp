@@ -31,6 +31,8 @@ void APlayerChar::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime); // Call parent update
 
+	playerUI->UpdateBars(Health, Hunger, Stamina); // Update UI bars
+
 	if (isBuilding) // Check building state
 	{
 		if (spawnedPart) // Ensure part exists

@@ -8,6 +8,7 @@
 #include "Resource_M.h" // Custom resource class header
 #include "Kismet/GameplayStatics.h" // Common engine utility functions
 #include "Buildingpart.h"
+#include "playerwidget.h"
 #include "PlayerChar.generated.h" // Unreal reflection system header
 
 UCLASS() // Macro for Unreal classes
@@ -74,7 +75,7 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "HitMarker") // Editable decal material properties
 		UMaterialInterface* hitDecal; // Visual feedback material pointer
-
+//-------------------week3---------------------------------------------------------------------------------------
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Building Supplies")
 	TArray<int> BuildingArray; // Inventory for parts
 
@@ -86,6 +87,9 @@ public:
 
 	UPROPERTY()
 	ABuildingPart* spawnedPart; // Reference to instance
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPlayerWidget* playerUI;
 
 	UFUNCTION(BlueprintCallable) // Callable from Unreal Blueprints
 		void SetHealth(float amount); // Health modifier function declaration
@@ -101,7 +105,7 @@ public:
 
 	UFUNCTION() // Expose to reflection system
 		void GiveResource(float amount, FString resourceType); // Add items to inventory
-
+//--------------------Week3---------------------------------------------------------------------------------------
 	UFUNCTION(BlueprintCallable) // Expose to Blueprints
 		void UpdateResources(float woodAmount, float stoneAmount, FString buildingObject); // Handle resource logic
 
